@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample HTML Document for Django Project</title>
+  <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+</head>
+<body>
+  <div id="staticImg"><img src="{% static 'bpy.png' %}" alt="" height="40px"> <p><a href="https://www.bpytutor.com/?github=Surajit-Singha-Sisir">BPYTUTOR.COM</a></p></div>
+  <div class="container">
+    
+    <img src="https://i.ibb.co/dG8HrWN/krisna.png" alt="Your Image" class="thumbnail">
+    <div class="overlay">
+      <span class="close-btn">&times;</span>
+      <img src="https://i.ibb.co/dG8HrWN/krisna.png" alt="Your Image" class="full-image">
+    </div>
+  </div>
+</body>
+<script src="{% static 'script.js' %}"></script>
+</html>
