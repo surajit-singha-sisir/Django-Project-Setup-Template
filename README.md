@@ -37,13 +37,13 @@ Please make sure you have a virtual environment set up before running this proje
 
 The project structure includes the following files and folders:
 
-- `project_name/`: The root directory of the Django project.
+- `Project/`: The root directory of the Django project.
   - `manage.py`: The Django management script.
-  - `project_name/`: The project package directory.
+  - `Project/`: The project package directory.
     - `settings.py`: The project settings file.
     - `urls.py`: The project-level URL configuration.
     - `wsgi.py`: The WSGI application entry point.
-- `app_name/`: The Django app directory.
+- `app1/`: The Django app directory.
   - `urls.py`: The app-level URL configuration.
   - `views.py`: The app's views file.
   - `static/`: Folder for static files (CSS, JS, etc.).
