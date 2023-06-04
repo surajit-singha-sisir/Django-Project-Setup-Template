@@ -1,23 +1,33 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sample HTML Document for Django Project</title>
-  <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+    <title>Image to Bengali Text Converter</title>
+    <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 <body>
-  <div id="staticImg"><img src="{% static 'bpy.png' %}" alt="" height="40px"> <p><a href="https://www.bpytutor.com/?github=Surajit-Singha-Sisir">BPYTUTOR.COM</a></p></div>
-  <div class="container">
-    
-    <img src="https://i.ibb.co/dG8HrWN/krisna.png" alt="Your Image" class="thumbnail">
-    <div class="overlay">
-      <span class="close-btn">&times;</span>
-      <img src="https://i.ibb.co/dG8HrWN/krisna.png" alt="Your Image" class="full-image">
-    </div>
-  </div>
+  <h1>IMAGE TO BANGLA TEXT (OCR) TEXT CONVERTER</h1>
+    <div class="upload-container">
+        <form id="upload-form" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="file-upload">
+            <label for="file-input" class="file-input-label">
+              <span class="file-icon"><i class="fas fa-cloud-upload-alt"></i></span>
+              <span class="file-text">Choose File</span>
+              <input type="file" id="file-input" name="image" accept="image/*" required>
+            </label>
+          </div>
+          <div class="file-name"></div>
+          <div class="button-container">
+            <button type="submit" class="submit-button">Submit</button>
+          </div>
+        </form>
+      </div>
+      <p id="right-bottom"> &copy; Surajit Singha Sisir</p>
+              
 </body>
 <script src="{% static 'script.js' %}"></script>
+
 </html>

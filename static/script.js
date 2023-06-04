@@ -1,21 +1,16 @@
-const thumbnail = document.querySelector(".thumbnail");
-const overlay = document.querySelector(".overlay");
-const closeBtn = document.querySelector(".close-btn");
-const fullImage = document.querySelector(".full-image");
+// Get the file input element
+const fileInput = document.getElementById('file-input');
 
-thumbnail.addEventListener("click", function () {
-  overlay.style.display = "flex";
-  document.body.style.overflow = "hidden"; // prevent scrolling
-});
+// Get the file text element
+const fileText = document.querySelector('.file-text');
 
-closeBtn.addEventListener("click", function () {
-  overlay.style.display = "none";
-  document.body.style.overflow = "auto"; // enable scrolling
-});
-
-overlay.addEventListener("click", function (e) {
-  if (e.target !== fullImage) {
-    overlay.style.display = "none";
-    document.body.style.overflow = "auto"; // enable scrolling
+// Listen for file selection changes
+fileInput.addEventListener('change', function() {
+  if (fileInput.files.length > 0) {
+    // Display the selected file name
+    fileText.textContent = fileInput.files[0].name;
+  } else {
+    // Reset the file text if no file is selected
+    fileText.textContent = 'Choose File';
   }
 });

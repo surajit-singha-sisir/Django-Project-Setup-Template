@@ -1,3 +1,6 @@
-asgiref==3.4.1
-Django==3.2.9
-Pillow==8.4.0
+asgiref==3.7.2
+Django==4.2.1
+Pillow==9.5.0
+pytesseract==0.3.10
+reportlab==4.0.4
+virtualenv==20.23.0
